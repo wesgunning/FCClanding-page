@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+}
+header {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-left, nav ul {
+    display: flex;
+    border: 2px solid red;
+}
+nav ul {
+    list-style-type: none;
+    border: 2px solid red;
+}
+#email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#video {
+    display: flex;
+    justify-content: center;
+}
+#packages {
+    display: flex;
+}
+#packages div {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer ul {
+    border: 2px solid red;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+}
