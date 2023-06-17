@@ -1,24 +1,90 @@
+:root {
+    --main-bg: #b3d9ff;
+    --bg-darker: hsl(210, 100%, 80%);
+    --button-bg: #FFD9B3;
+}
+@font-face {
+    font-family: my-future-font;
+    src: url(Borg.ttf);
+}
 * {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: var(--main-bg);
 }
 header {
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--main-bg);
+
+}
+main {
+    margin-top: 7rem;
+}
+section {
+    margin: 2rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    font-weight: 300;
+    font-size: 3.5rem;
+    font-family: my-future-font, Arial, Helvetica, sans-serif;
 }
 #nav-left, nav ul {
     display: flex;
     border: 2px solid red;
+    align-items: center;
+    margin: 1.5rem 3rem;
+}
+#nav-left img {
+    height: 2.5rem;
+    width: 2.5rem;
+    rotate: 45deg;
+    margin-right: 0.5rem;
 }
 nav ul {
     list-style-type: none;
     border: 2px solid red;
+    padding-left: 0;
+}
+nav li {
+    margin-left: 2rem;
 }
 #email-form {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form input {
+    margin-top: 0.8rem;
+}
+input[type="email"] {
+    min-width: 250px;
+    line-height: 1.5rem;
+}
+#submit {
+    width: fit-content;
+    background-color: var(--button-bg);
+    border-style: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
 }
 #video {
     display: flex;
@@ -32,10 +98,19 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+footer {
+    margin: auto;
+    max-width: 1000px;
 }
 footer ul {
-    border: 2px solid red;
+    background-color: var(--bg-darker);
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
+    padding: 1rem;
+}
+footer ul li {
+    margin-left: 1rem;
 }
