@@ -2,6 +2,8 @@
     --main-bg: #b3d9ff;
     --bg-darker: hsl(210, 100%, 80%);
     --button-bg: #FFD9B3;
+    --button-hover: #ffa64d;
+    --header-height: 6.5rem;
 }
 @font-face {
     font-family: my-future-font;
@@ -18,14 +20,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     background-color: var(--main-bg);
 
-}
-main {
-    margin-top: 7rem;
 }
 section {
     margin: 2rem;
@@ -39,7 +38,7 @@ h1 {
     font-size: 3.5rem;
     font-family: my-future-font, Arial, Helvetica, sans-serif;
 }
-#nav-left, nav ul {
+#nav-left, nav {
     display: flex;
     border: 2px solid red;
     align-items: center;
@@ -52,12 +51,14 @@ h1 {
     margin-right: 0.5rem;
 }
 nav ul {
+    border: 2px solid blue;
     list-style-type: none;
-    border: 2px solid red;
-    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
 }
-nav li {
-    margin-left: 2rem;
+#email-form h2 {
+    font-weight: bold;
 }
 #email-form {
     border: 2px solid red;
@@ -86,19 +87,69 @@ input[type="email"] {
     font-weight: 600;
     padding: 0.5rem 1rem;
 }
+#submit:hover {
+    background-color: var(--button-hover);
+}
+#features {
+    scroll-margin-top: var(--header-height);
+    max-width: 800px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    padding: 0 1rem;
+}
+#features h3 {
+    font-size: 1.5rem;
+}
+#features p {
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+}
 #video {
+    scroll-margin-top: var(--header-height);
     display: flex;
     justify-content: center;
 }
 #packages {
+    scroll-margin-top: var(--header-height);
+    margin-top: 80px;
     display: flex;
+    justify-content: center;
 }
 #packages div {
-    border: 2px solid blue;
+    min-height: 300px;
+    max-width: 300px;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+#packages div * {
+    margin: 0.5rem auto;
+}
+#packages div h3 {
+    padding: 1.5rem 0;
+    margin-top: 0;
+    width: 100%;
+    background-color: var(--bg-darker);
+}
+#packages div p {
+    width: 40%;
+    line-height: 1.5rem;
+}
+button.select {
+    font-size: 1rem;
+    background-color: var(--button-bg);
+    border-style: none;
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+}
+.button:hover {
+    background-color: var(--button-hover);
 }
 footer {
     margin: auto;
@@ -113,4 +164,56 @@ footer ul {
 }
 footer ul li {
     margin-left: 1rem;
+}
+@media (min-width: 621px) {
+    nav ul {
+        min-width: 250px;
+    }
+}
+@media (max-width: 800px) {
+    #features {
+        scroll-margin-top: calc(var(--header-height) + 1rem);
+    }
+    #packages {
+        flex-direction: column;
+    }
+    #packages div {
+        margin: 10px auto;
+    }
+    #nav-left {
+        margin-right: auto;
+    }
+    nav {
+        margin-left: auto;
+    }
+}
+@media (max-width: 620px) {
+    #features {
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-width: fit-content;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    #features, #video, #packages {
+        scroll-margin-top: calc(var(--header-height) + 6rem);
+    }
+    header {
+        flex-direction: column;
+    }
+    #nav-left {
+        margin: 1.5rem auto;
+    }
+    nav {
+        margin-top: 0;
+    }
 }
