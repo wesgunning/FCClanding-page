@@ -11,14 +11,14 @@
 <body>
     <header id="header">
         <div id="nav-left">
-            <img width="96" height="96" src="https://img.icons8.com/material-rounded/96/jetpack.png" alt="jetpack"/>
+            <img width="96" id="header-img" height="96" src="https://img.icons8.com/material-rounded/96/jetpack.png" alt="jetpack"/>
             <h1>Elroy&nbsp;Industries</h1>
         </div>
         <nav id="nav-bar">
             <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#video">How It Works</a></li>
-                <li><a href="#packages">Pricing</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#video" class="nav-link">How It Works</a></li>
+                <li><a href="#packages" class="nav-link">Pricing</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <section id="email-form">
             <h2>Your Very Own Personal Jetpack</h2>
             <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input type="email" placeholder="Enter your email address">
+                <input type="email" id="email" placeholder="Enter your email address" name="email">
                 <input type="submit" class="button" id="submit" value="GET STARTED">
             </form>
         </section>
@@ -39,26 +39,32 @@
             <h4></h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic non expedita mollitia dolor quis? Error corporis, explicabo sit tenetur iusto reprehenderit laboriosam ab doloremque accusantium molestiae dolore, neque, provident sunt?</p>
         </section>
-        <section id="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nj-Iwv5NJKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section class="video">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/nj-Iwv5NJKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
         <section id="packages">
             <div class="package1">
-                <h3>Economy</h3>
-                <h4>Price</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, debitis!</p>
+                <div class="content">
+                    <h3>Economy</h3>
+                    <h4>Price</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, debitis!</p>
+                </div>
                 <button class="select button">SELECT</button>
             </div>
             <div class="package2">
-                <h3>Sport</h3>
-                <h4>Price</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam.</p>
+                <div class="content">
+                    <h3>Sport</h3>
+                    <h4>Price</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, quisquam.</p>
+                </div>
                 <button class="select button">SELECT</button>
             </div>
             <div class="package3">
-                <h3>Deluxe</h3>
-                <h4>Price</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, numquam.</p>
+                <div class="content">
+                    <h3>Deluxe</h3>
+                    <h4>Price</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur, numquam.</p>
+                </div>
                 <button class="select button">SELECT</button>
             </div>
         </section>

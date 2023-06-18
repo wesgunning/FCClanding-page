@@ -103,7 +103,7 @@ input[type="email"] {
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
 }
-#video {
+.video {
     scroll-margin-top: var(--header-height);
     display: flex;
     justify-content: center;
@@ -114,27 +114,32 @@ input[type="email"] {
     display: flex;
     justify-content: center;
 }
-#packages div {
+@media (min-width: 801px) {
+    #packages div:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+#packages>div {
     min-height: 300px;
     max-width: 300px;
-    margin-right: 20px;
     border: 1px solid black;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
 }
 #packages div * {
     margin: 0.5rem auto;
 }
-#packages div h3 {
+#packages div .content h3 {
     padding: 1.5rem 0;
     margin-top: 0;
     width: 100%;
     background-color: var(--bg-darker);
 }
-#packages div p {
+#packages div .content p {
     width: 40%;
     line-height: 1.5rem;
 }
@@ -238,4 +243,8 @@ footer p {
     nav {
         margin-top: 0;
     }
+}
+div.content {
+    width: 100%;
+    margin-top: 0 !important;
 }
