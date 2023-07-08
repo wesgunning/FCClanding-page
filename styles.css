@@ -13,6 +13,9 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: var(--main-bg);
 }
@@ -231,7 +234,7 @@ footer p {
     }
 }
 @media (max-width: 600px) {
-    #features, #video, #packages {
+    #features, #video-section, #packages {
         scroll-margin-top: calc(var(--header-height) + 6rem);
     }
     header {
